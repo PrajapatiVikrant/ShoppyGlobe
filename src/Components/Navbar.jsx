@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Cart from "./SubComponent/Cart/Cart";
+import { Link } from "react-router";
 
 export default function Navbar(){
     const [home,setHome] = useState(true)
@@ -23,8 +24,8 @@ export default function Navbar(){
             </section>
             <section>
                 <ul className="flex gap-11">
-                    <li className={`cursor-pointer  ${home?"border-t-2":"border-none"} `} onClick={()=>handleClick("home")}>Home</li>
-                    <li className={`cursor-pointer  ${product?"border-t-2":"border-none"}`} onClick={()=>handleClick("product")}>Product</li>
+                    <li className={`cursor-pointer  ${home?"border-t-2":"border-none"} `} onClick={()=>handleClick("home")}><Link to='/'>Home</Link></li>
+                    <li className={`cursor-pointer  ${product?"border-t-2":"border-none"}`} onClick={()=>handleClick("product")}><Link to='/products'>Products</Link></li>
                    <li className="cursor-pointer"><Cart/></li>
                 </ul>
             </section>
