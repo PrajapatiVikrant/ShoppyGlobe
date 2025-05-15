@@ -9,6 +9,8 @@ import Home from './Page/Home.jsx'
 import ProductList from './Page/ProductList.jsx'
 import CartList from './Page/CartList.jsx'
 import ProductDetail from './Page/ProductDetail.jsx'
+import { Provider } from 'react-redux'
+import store from './State/Store.js'
 
 const appRouter = createBrowserRouter([
      {
@@ -29,7 +31,7 @@ const appRouter = createBrowserRouter([
           element:<CartList/>
          },
          {
-          path:"/productDetail",
+          path:"/productDetail/:id",
           element:<ProductDetail/>
          }
       ]
@@ -37,6 +39,9 @@ const appRouter = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
+
    <RouterProvider router={appRouter}/>
+    </Provider>
   </StrictMode>,
 )
