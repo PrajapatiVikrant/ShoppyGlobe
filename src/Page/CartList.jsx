@@ -1,7 +1,11 @@
 import { useSelector } from "react-redux";
 import CartCard from "../Components/SubComponent/Cart/CartCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
+
+
+//cart list component
 export default function CartList() {
     
     const cartList = useSelector((state) => state.cartList)
@@ -21,7 +25,7 @@ export default function CartList() {
     return (
         <main className="flex  flex-col-reverse  md:flex-row-reverse  justify-center gap-6  p-11    ">
 
-            <section className="flex  w-full flex-col   justify-center items-center">
+            <section className="flex  w-full sm:w-[70%] flex-col   justify-center items-center">
 
             {(cartList.length != 0)?cartList.map((product)=>{
                 return <CartCard 
@@ -51,7 +55,8 @@ export default function CartList() {
                 <br />
                 <hr className="bg-black border w-full " />
                 <br />
-                <button className="bg-blue-700 hover:bg-blue-400 cursor-pointer h text-white p-1.5 w-full" onClick={()=>alert('Sorry for delay this service')}>Send Order </button>
+                {(total>0)&& <Link to='/checkout'> <button className="bg-blue-700 hover:bg-blue-400 cursor-pointer h text-white p-1.5 w-full" >Checkout</button></Link> }
+             
             </section>
         </main>
     )

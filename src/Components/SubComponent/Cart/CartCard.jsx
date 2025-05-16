@@ -20,10 +20,16 @@ export default function CartCard({ id, url, name, category, desc, price, qty, br
         dispatch(changeCartList(deletedList)); //update in redux where given element have deleted
     }
 
+
+
+   //handleEdit function is reusable for increment and decrement qty functionality
    function handleEdit(type){
+    //deep copy of cart list because we have to update new list
     let list = structuredClone(cartList);
     let editList = [];
     if(type=='increment'){
+
+        //if handleEdit function invoked for increment qty 
           editList = list.map((product)=>{
             if(product.id == id){
                 product.qty += 1;
@@ -31,6 +37,7 @@ export default function CartCard({ id, url, name, category, desc, price, qty, br
             return product;
          })
     }else{
+         //if handleEdit function invoked for decrement qty 
         editList = list.map((product)=>{
             if(product.id == id && product.qty != 1){
                 product.qty -= 1
@@ -38,6 +45,8 @@ export default function CartCard({ id, url, name, category, desc, price, qty, br
             return product;
         })
     }
+
+      //finaly update updated qty  list 
       dispatch(changeCartList(editList));
    }
 

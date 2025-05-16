@@ -1,12 +1,46 @@
-# React + Vite
+# Project
+  ShopyGlobe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+  ShopyGlobe is a simple ecomerce application which provide user to purchase product digitally
 
-Currently, two official plugins are available:
+## Freatures
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Home page with a welcome message, navigation, and popular product
+- Browse product list with filteration by category (provide each category with checkbox input)
+- Each product item view detail and add to cart button
+- View detailed information about each product by dynamic route parameter
+- Search  functionality to filter products by title,brand or categoryu provide input field
+- Implement cart which contain cartitem with delete, edit features
+- Checkout page which contain two step 
+- - step-1 view all cart item added by you
+- - step-2 send your order with order form with validation 
+- Increase  app performance  using lazy functionality in react.js
+- Redux-based state management for books
+- 404 Not Found page for undefined routes
+  
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, React Router, Redux, Redux Toolkit
+- **Styling:** Tailwindcss
+- **State Management:** Redux Toolkit
+- **Routing:** React Router DOM
+
+## How to run this application
+
+### Run following command in terminal if you want clone from github
+- step-1 git clone https://github.com/PrajapatiVikrant/ShoppyGlobe.git
+- step-2 cd ShoppyGlobe
+- step-3 npm install
+- step 4 npm run dev
+
+### Run following command if you want extract zip file
+- step-1 write click on ShoppyGlobe.zip 
+- step-2 Click on extract here 
+- step-3 Open extract file with vscode 
+- step-4 Run following command inside terminal
+- - npm install
+- - npm run dev
+
+

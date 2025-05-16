@@ -47,10 +47,13 @@ export default function ProductList() {
         <>
             {loading && <p className="text-3xl font-bold text-center w-[100%] h-[89vh] flex justify-center items-center">Product loading ....</p>}
             {error && <p className=" w-[100%] h-[89vh] flex justify-center items-center">{error} problem in loading</p>}
-            {(loading || error) ? "" : (
-                <main className="flex flex-col sm:flex-row">
+            
 
-                    <section className=" w-[20%] p-3">
+            {/* conditonal rendring base on state of data fatching */}
+            {(loading || error) ? "" : (
+                <main className="grid grid-cols-1 sm:grid-cols-[1fr_4fr]">
+
+                    <section className="  p-3">
                         <h1 className=" text-2xl font-bold">Product Category</h1>
                         <ul>
 
@@ -62,8 +65,8 @@ export default function ProductList() {
                         </ul>
 
                     </section>
-                    <section className="flex flex-col justify-center items-center">
-                        <div className="border-b-2 flex w-[80%] gap-2 text-xl items-center m-8">
+                    <section className="flex flex-col  justify-center items-center">
+                        <div className="border-b-2 flex w-[70%] gap-2 text-xl items-center m-8">
                             <IoIosSearch />
                             <input className=" outline-none w-full  " value={search} type="text" onChange={(e) => handleSearch(e.target.value)} placeholder="Searh product by category,name,brand....." />
                         </div>

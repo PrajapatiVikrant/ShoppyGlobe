@@ -2,10 +2,10 @@ import {  useState } from "react"
 import './Intro.css'
 import { Link } from "react-router"
 
+
+
+// create intro components which is subcomponent of home components
 export default function Intro() {
-   
-   
-    
 
     return (
         <section  className='introCtn z-0  h-[89vh] bg-cover bg-center'>

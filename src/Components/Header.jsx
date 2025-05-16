@@ -21,7 +21,7 @@ export default function Header() {
 
     return (
         <nav className="sticky top-0 w-full flex flex-col gap-3 md:flex-row items-center text-2xl text-white bg-black justify-between p-3 px-7">
-            {/* add logo at applicaiton */}
+            {/* add logo for applicaiton */}
             <section className="font-bold  text-3xl">
                 <span >ShoppyGlobe</span>
             </section>

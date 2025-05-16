@@ -6,15 +6,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeCartList } from "../State/Slice/CartListSlice";
 
 
+
 export default function ProductDetail() {
     const { id } = useParams();    
     const cartList = useSelector((state) => state.cartList)
-    const [detail, setDetail] = useState({});
+    const [detail,setDetail] = useState([])
     const { data, error, loading } = useFatch(`https://dummyjson.com/products/${id}`);
     const disptach = useDispatch();
 
     useEffect(() => {
-        setDetail(data);
+       setDetail(data)
     }, [data])
 
 

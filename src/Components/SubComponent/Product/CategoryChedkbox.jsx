@@ -4,6 +4,9 @@ import { changeFilterList } from "../../../State/Slice/FiilterProductSlice";
 import { changeList } from "../../../State/Slice/ProductsSlice";
 import useFatch from "../../../utils/useFatch";
 
+
+
+//check box for each category
 export default function CategoryCheckbox({category}){
     const [status,setStatus] = useState(false);
     const [productList,setProductList] = useState([]);
