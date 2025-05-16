@@ -16,7 +16,7 @@
 - - step-1 view all cart item added by you
 - - step-2 send your order with order form with validation 
 - Increase  app performance  using lazy functionality in react.js
-- Redux-based state management for books
+- Redux-based state management for product
 - 404 Not Found page for undefined routes
   
 
